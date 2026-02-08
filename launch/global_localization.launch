@@ -8,6 +8,11 @@
 
 <node name="global_localization" pkg="outram" type="global_localization" launch-prefix="$(arg launch_prefix)" output="screen"/>
 
-<node name="rviz" pkg="rviz" type="rviz" args="-d $(find outram)/rviz/global_localization_ntu.rviz"/>
+<!-- <node name="rviz" pkg="rviz" type="rviz" args="-d $(find outram)/rviz/global_localization_ntu.rviz"/> -->
+
+<node pkg="outram" type="pose_to_csv.py" name="pose_to_csv" output="screen" respawn="false" >    
+    <param name="output_dir" value="/home/dat/data/outram/data/" />
+    <param name="csv_name" value="pose.csv" />
+</node>
 
 </launch>

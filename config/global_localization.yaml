@@ -39,20 +39,20 @@ noise_level: 0.5
 distribution_noise_level: 10
 
 ######################### control param #########################
-step_stop: true
+step_stop: false
 begin_index: 0
 eva_frame_num: 5
 
-enable_visualization: true
+enable_visualization: false
 use_semantic: true 
 solving_all2all: false
 dsample: true
 gen_cluster_map: false
 
 ######################### data base param #########################
-scan_path: /test_data/bin
-label_path: /test_data/label
-gt_file_path: /test_data/pose.txt
+scan_path: /home/dat/data/outram/data/bin
+label_path: /home/dat/data/outram/data/label
+gt_file_path: /home/dat/data/outram/data/pose.txt
 # MCD
 calibration_matrix:
   data: [0.9999346552051229, 0.003477624535771754, -0.010889970036688295, -0.060649229060416594,
@@ -64,10 +64,15 @@ calibration_matrix:
 #          -0.00583984,-0.99998295, 0.00000175, -0.01105054,
 #          -0.00000523, 0.00000178, 1.0,        -1.80469106]
 
-viz_map_file_path: /test_data/GlobalFullMapSpar.pcd
+viz_map_file_path: /home/dat/data/outram/data/GlobalFullMapSpar.pcd
 
-cluster_map_path: /test_data/semantic_cluster_map/cluster_map.pcd
-cluster_map_cov_file_path: /test_data/semantic_cluster_map/covariances.bin
+cluster_map_path: /home/dat/data/outram/data/semantic_cluster_map/cluster_map.pcd
+cluster_map_cov_file_path: /home/dat/data/outram/data/semantic_cluster_map/covariances.bin
+
+######################### online ##########################
+trigger_cloud_topic: /os_cloud_node/points
+pose_frame: map
+base_seq: 3071  
 
 ######################### std param ##########################
 # pre process
